@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2025-11-21 19:07
-# @Author  : Jianan Wang (jianan@insilicom.com)
-# @File    : global_config.py
-
-"""
-This is the global config across all pipelines.
-"""
-
 from pathlib import Path
 from dotenv import load_dotenv
 
