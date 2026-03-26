@@ -207,6 +207,10 @@ marimo/_lsp/
 __marimo__/
 
 .vscode/ 
-# Data files
+# Data files (exclude production data)
 *.jsonl
 *.json
+
+# Sample data for demonstration — whitelist the test dataset
+!biomedical_nlp/drug_disease/data/test/*.json
+!biomedical_nlp/drug_disease/data/test/*.jsonl

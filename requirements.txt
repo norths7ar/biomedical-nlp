@@ -1,0 +1,10 @@
+# Core LLM dependencies
+langchain-core
+langchain-openai          # DeepSeek (and OpenAI) — used in current pipelines
+
+# Optional providers (uncomment to enable)
+# langchain-anthropic     # Anthropic Claude
+# langchain-google-genai  # Google Gemini
+
+# Environment / config
+python-dotenv

@@ -1,0 +1,5 @@
+{"pmid": "38734521", "has_duplicate_diseases": false, "kept_entities": [{"name": "type 2 diabetes", "id": "2891"}], "dropped_entities": [], "replacement_map": {}, "explanation": "Less than 2 diseases.", "decode_error": false}
+{"pmid": "39102847", "has_duplicate_diseases": false, "kept_entities": [{"name": "acute liver failure", "id": "3317"}], "dropped_entities": [], "replacement_map": {}, "explanation": "Less than 2 diseases.", "decode_error": false}
+{"pmid": "37891203", "has_duplicate_diseases": false, "kept_entities": [{"name": "coronavirus disease 2019", "id": "6034"}], "dropped_entities": [], "replacement_map": {}, "explanation": "Less than 2 diseases.", "decode_error": false}
+{"pmid": "38456781", "has_duplicate_diseases": false, "kept_entities": [{"name": "gastrointestinal bleeding", "id": "8901"}], "dropped_entities": [], "replacement_map": {}, "explanation": "Less than 2 diseases.", "decode_error": false}
+{"pmid": "39234567", "has_duplicate_diseases": false, "kept_entities": [{"name": "acute kidney injury", "id": "9012"}], "dropped_entities": [], "replacement_map": {}, "explanation": "Less than 2 diseases.", "decode_error": false}
