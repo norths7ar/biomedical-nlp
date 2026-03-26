@@ -1,9 +1,8 @@
 # Biomedical NLP — Drug Relation Extraction Pipeline
 
-A refactored version of a production pipeline, replacing an internal LLM framework with LangChain, for automatically extracting **drug–disease** relationships from PubMed biomedical literature.
+A refactored version of a production pipeline, replacing an internal LLM framework with LangChain, for automatically extracting **drug–disease** relationships from biomedical literature.
 
 > Currently migrated and runnable: `drug_disease`
-> Planned: `drug_target`, `drug_protein`, `clinical_trial`
 
 ---
 
@@ -78,6 +77,7 @@ Structured drug–disease relation data (JSONL)
 ### 3. Cross-Pipeline Entity Cache Warm-Up
 - Entity validation steps (step02a, step03a) pre-load cached results from the `drug_target` pipeline on startup
 - LLM results for the same entity are reused across pipelines, significantly reducing redundant API calls
+- Currently only `drug_disease` is available; the cross-pipeline cache takes effect when multiple pipelines are running
 
 ### 4. Runtime Dataset Switching
 ```bash
@@ -127,7 +127,9 @@ biomedical-nlp/
 **1. Install dependencies**
 ```bash
 pip install langchain-openai langchain-core python-dotenv
-pip install -e path/to/myutils   # internal utility library
+pip install -e path/to/myutils
+# myutils is the author's private utility library; contact the author to run locally,
+# or refer to requirements.txt to replace with standard-library equivalents
 ```
 
 **2. Configure API key**

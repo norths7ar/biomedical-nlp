@@ -3,7 +3,6 @@
 基于前司生产系统架构的重构版本，将内部 LLM 框架替换为 LangChain，用于从生物医学文献中自动抽取**药物–疾病**关联关系。
 
 > 当前已迁移并可运行的 pipeline：`drug_disease`（药物–疾病）
-> 规划中：`drug_target`、`drug_protein`、`clinical_trial`
 
 ---
 
@@ -78,6 +77,7 @@ step12  [LLM] 分类关系类型（治疗 / 副作用 / 关联等）
 ### 3. 跨 pipeline 实体缓存预热
 - 实体验证步骤（step02a、step03a）启动时优先读取 `drug_target` pipeline 的历史结果作为缓存
 - 相同实体在不同 pipeline 中复用 LLM 结果，显著减少重复调用
+- 当前仅drug_disease可用，跨pipeline缓存在多pipeline场景下生效
 
 ### 4. 运行时数据集切换
 ```bash
@@ -127,7 +127,8 @@ biomedical-nlp/
 **1. 安装依赖**
 ```bash
 pip install langchain-openai langchain-core python-dotenv
-pip install -e path/to/myutils   # 内部工具库
+pip install -e path/to/myutils
+# myutils 为作者私有工具库，如需运行请联系作者或参考 requirements.txt 替换为标准库实现
 ```
 
 **2. 配置 API Key**
